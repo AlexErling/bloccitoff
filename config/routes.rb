@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'items/create'
 
   get 'todolist' => 'users#show'
-  resources :items, only: [:create]
+  resources :items, only: [:create, :destroy]
   devise_for :users
   root 'welcome#index'
   get  'about' => 'welcome#about'
